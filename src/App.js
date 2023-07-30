@@ -85,4 +85,4 @@ function App() {
 }
 
 export default App;
-library.add(fab, fas, far);
+library.add(fab, fas);
