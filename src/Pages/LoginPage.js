@@ -50,7 +50,8 @@ const LoginPage = () => {
     console.log(formData);
     axios
       // .post("http://localhost:4000/send-email", formData)
-      .post("http://127.0.0.1:8000/api/login/", formData)
+      // .post("http://127.0.0.1:8000/api/login/", formData)
+      .post("https://talentbackend.onrender.com/api/login/", formData)
       .then((response) => {
         console.log(response);
         console.log("formdata", formData);

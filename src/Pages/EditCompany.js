@@ -19,7 +19,10 @@ const EditCompany = () => {
     console.log(formData);
     axios
       // .post("http://localhost:4000/send-email", formData)
-      .put("http://127.0.0.1:8000/companies/" + companyid + "/", formData)
+      .put(
+        "https://talentbackend.onrender.com/companies/" + companyid + "/",
+        formData
+      )
       .then((response) => {
         console.log(response);
         console.log("formdata", formData);
@@ -29,7 +32,7 @@ const EditCompany = () => {
       });
     const api = () =>
       axios
-        .get(`http://127.0.0.1:8000/companies/`)
+        .get(`https://talentbackend.onrender.com/companies/`)
         .then((response) => {
           setCompanies(response.data);
           console.log(response.data);

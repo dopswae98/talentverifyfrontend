@@ -35,7 +35,7 @@ const CompanyList = () => {
     console.log(formData);
     axios
       // .post("http://localhost:4000/send-email", formData)
-      .post("http://127.0.0.1:8000/companies/", formData)
+      .post("https://talentbackend.onrender.com/companies/", formData)
       .then((response) => {
         console.log(response);
         console.log("formdata", formData);
@@ -52,7 +52,7 @@ const CompanyList = () => {
   const deleteCompany = (id) => {
     console.log(id);
     axios
-      .delete(`http://127.0.0.1:8000/companies/${id}`, {
+      .delete(`https://talentbackend.onrender.com/companies/${id}`, {
         method: "DELETE",
         headers: {
           Accept: "application/json",
@@ -75,7 +75,7 @@ const CompanyList = () => {
 
   const api = () =>
     axios
-      .get(`http://127.0.0.1:8000/companies/`)
+      .get(`https://talentbackend.onrender.com/companies/`)
       .then((response) => {
         setCompanies(response.data);
         console.log(response.data);

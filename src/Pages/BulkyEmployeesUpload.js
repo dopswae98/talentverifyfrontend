@@ -19,7 +19,7 @@ const BulkyEmployeesUpload = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/employee_upload_csv/",
+        "https://talentbackend.onrender.com/api/employee_upload_csv/",
         formData,
         {
           headers: {

@@ -31,7 +31,7 @@ const DataContextProvider = ({ children }) => {
   });
   const employeesApi = () =>
     axios
-      .get(`http://127.0.0.1:8000/employees/`)
+      .get(`https://talentbackend.onrender.com/employees/`)
       .then((response) => {
         setEmployeeDetails(response.data);
         console.log(response.data);
@@ -41,7 +41,7 @@ const DataContextProvider = ({ children }) => {
       });
   const companiesApi = () =>
     axios
-      .get(`http://127.0.0.1:8000/companies/`)
+      .get(`https://talentbackend.onrender.com/companies/`)
       .then((response) => {
         setCompanies(response.data);
         console.log(response.data);
@@ -51,7 +51,7 @@ const DataContextProvider = ({ children }) => {
       });
   const api = () =>
     axios
-      .get(`http://127.0.0.1:8000/companies/`)
+      .get(`https://talentbackend.onrender.com/companies/`)
       .then((response) => {
         setCompanies(response.data);
         console.log(response.data);
