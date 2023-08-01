@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-// import { far } from "@fortawesome/free-regular-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
 
 import { Routes, Route } from "react-router-dom";
 import CompanyList from "./Pages/CompanyList";
@@ -21,6 +21,9 @@ import AddEmployee from "./Pages/AddEmployee";
 import EditEmployee from "./Pages/EditEmployee";
 import AddCompany from "./Pages/AddCompany";
 import BulkyCompaniesUpload from "./Pages/BulkyCompaniesUpload";
+import LoadingEffect from "./Components/LoadingEffect";
+
+// import Apps from "./Pages/loader";
 
 function App() {
   // const [auth, setAuth, setIsAuthenticated] = useState(null);
@@ -42,6 +45,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<PrivateRoute />}>
+          {/* <Route path="/" element={<LoadingEffect />}> */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/companieslist" element={<CompanyList />} />
           <Route path="/companieslist/:companyid" element={<EditCompany />} />
@@ -85,4 +89,4 @@ function App() {
 }
 
 export default App;
-library.add(fab, fas);
+library.add(fab, fas, far);

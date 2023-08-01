@@ -195,38 +195,44 @@ const CompanyList = () => {
             </tr>
           </thead>
           <tbody>
-            {searchedProducts.map((company, id) => {
-              return (
-                <tr key={id} className="text-center bg-danger">
-                  <th scope="row">{id + 1}</th>
-                  <td className="text-danger">{company.name}</td>
-                  <td>{company.date_of_registration}</td>
-                  <td>{company.company_registration_number}</td>
-                  <td>{company.address}</td>
-                  <td>{company.contact_person}</td>
-                  <td>{company.contact_phone}</td>
-                  <td>{company.departments}</td>
-                  <td>{company.num_employees}</td>
-                  <td>{company.email}</td>
-                  <td>
-                    <Link
-                      className=""
-                      to={`/companieslist/${company.id}`}
-                      onClick={() => EditCompany(company)}
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      Edit
-                    </Link>
-                    <button
-                      className=" text-white bg-danger ms-1 rounded p-1"
-                      onClick={() => deleteCompany(company.id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              );
-            })}
+            {searchedProducts ? (
+              searchedProducts.map((company, id) => {
+                return (
+                  <tr key={id} className="text-center bg-danger">
+                    <th scope="row">{id + 1}</th>
+                    <td className="text-danger">{company.name}</td>
+                    <td>{company.date_of_registration}</td>
+                    <td>{company.company_registration_number}</td>
+                    <td>{company.address}</td>
+                    <td>{company.contact_person}</td>
+                    <td>{company.contact_phone}</td>
+                    <td>{company.departments}</td>
+                    <td>{company.num_employees}</td>
+                    <td>{company.email}</td>
+                    <td>
+                      <Link
+                        className=""
+                        to={`/companieslist/${company.id}`}
+                        onClick={() => EditCompany(company)}
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        Edit
+                      </Link>
+                      <button
+                        className=" text-white bg-danger ms-1 rounded p-1"
+                        onClick={() => deleteCompany(company.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : (
+              <div className="spinner-grow" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            )}
           </tbody>
         </table>
       </section>
