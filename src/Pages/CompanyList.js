@@ -136,10 +136,10 @@ const CompanyList = () => {
           <div className="row mx-1 mx-md-0">
             <div className="col-md-7 mx-auto px-0 bg-white rounded-pill">
               <form
-                className="d-flex justify-content-between align-items-center border border-0 border-2 border-top-0 border-start-0 border-end-0 mx-0"
+                className="d-flex justify-content-between align-items-center rounded-pill border border-0 border-2 border-top-0 border-start-0 border-end-0 mx-0 box_shadow1"
                 role="search"
               >
-                <div className="left_search d-flex w-100 justify-content-center flex-grow align-items-center">
+                <div className="left_search d-flex w-100 justify-content-center flex-grow align-items-center ">
                   {/* <FontAwesomeIcon
                 className="ms-2"
                 icon="fa-search"
@@ -157,8 +157,8 @@ const CompanyList = () => {
                 </div>
                 <div>
                   <button
-                    className="search btn btn-outline-danger"
-                    // onClick={handleSearch}
+                    className="search btn btn-outline-danger d-flex align-items-center justify-content-center"
+                    onClick={(e) => e.preventDefault()}
                     type="submit"
                   >
                     <FontAwesomeIcon
@@ -195,44 +195,38 @@ const CompanyList = () => {
             </tr>
           </thead>
           <tbody>
-            {searchedProducts ? (
-              searchedProducts.map((company, id) => {
-                return (
-                  <tr key={id} className="text-center bg-danger">
-                    <th scope="row">{id + 1}</th>
-                    <td className="text-danger">{company.name}</td>
-                    <td>{company.date_of_registration}</td>
-                    <td>{company.company_registration_number}</td>
-                    <td>{company.address}</td>
-                    <td>{company.contact_person}</td>
-                    <td>{company.contact_phone}</td>
-                    <td>{company.departments}</td>
-                    <td>{company.num_employees}</td>
-                    <td>{company.email}</td>
-                    <td>
-                      <Link
-                        className=""
-                        to={`/companieslist/${company.id}`}
-                        onClick={() => EditCompany(company)}
-                        style={{ textDecoration: "none", color: "black" }}
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        className=" text-white bg-danger ms-1 rounded p-1"
-                        onClick={() => deleteCompany(company.id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })
-            ) : (
-              <div className="spinner-grow" role="status">
-                <span className="sr-only">Loading...</span>
-              </div>
-            )}
+            {searchedProducts.map((company, id) => {
+              return (
+                <tr key={id} className="text-center bg-danger">
+                  <th scope="row">{id + 1}</th>
+                  <td className="text-danger">{company.name}</td>
+                  <td>{company.date_of_registration}</td>
+                  <td>{company.company_registration_number}</td>
+                  <td>{company.address}</td>
+                  <td>{company.contact_person}</td>
+                  <td>{company.contact_phone}</td>
+                  <td>{company.departments}</td>
+                  <td>{company.num_employees}</td>
+                  <td>{company.email}</td>
+                  <td>
+                    <Link
+                      className=""
+                      to={`/companieslist/${company.id}`}
+                      onClick={() => EditCompany(company)}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      Edit
+                    </Link>
+                    <button
+                      className=" text-white bg-danger ms-1 rounded p-1"
+                      onClick={() => deleteCompany(company.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </section>

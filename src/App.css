@@ -156,6 +156,9 @@ h1 {
 .box_shadow {
   box-shadow: rgba(54, 253, 240, 0.2) 0px 7px 29px 0px;
 }
+.box_shadow1 {
+  box-shadow: rgba(253, 147, 54, 0.2) 0px 7px 29px 0px;
+}
 
 .login_button {
   background-color: rgba(0, 62, 58, 1) !important;
