@@ -61,7 +61,7 @@ const DataContextProvider = ({ children }) => {
       });
 
   const [fakeAuthService, setFakeAuthService] = useState({
-    isAuthenticated: true,
+    isAuthenticated: false,
     login(callback) {
       this.isAuthenticated = true;
       setTimeout(callback, 100);

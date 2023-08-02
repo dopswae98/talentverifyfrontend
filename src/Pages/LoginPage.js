@@ -138,7 +138,6 @@ const LoginPage = () => {
         }
         role="alert"
       >
-        File Uploaded
         <span className="fw-bold ms-1">
           {feedback ? "Login Success" : `Password Error`}
         </span>
