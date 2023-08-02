@@ -28,6 +28,7 @@ const NavbarComponent = () => {
     // return <Navigate to="/login" replace={true} />;
     fakeAuthService["isAuthenticated"] = false;
     setFakeAuthService({ ...fakeAuthService, isAuthenticated: false });
+
     setAuth(true);
     // const fakeAuthService = {
     //   isAuthenticated: false,
@@ -42,6 +43,7 @@ const NavbarComponent = () => {
     // };
     // history.pushState("/login");
     console.log("logged out");
+    // navigate("../login", { replace: true });
     if (
       // !fakeAuthService.isAuthenticated &&
       !auth
