@@ -98,7 +98,7 @@ const DataContextProvider = ({ children }) => {
   const login = (token) => {
     localStorage.setItem("token", token);
     setIsAuthenticated(true);
-    navigate("/private"); // Redirect to private route after login
+    navigate("/dashboard"); // Redirect to private route after login
   };
 
   const logout = () => {
