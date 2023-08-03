@@ -148,6 +148,7 @@ const LoginPage = () => {
           aria-label="Close"
         ></button>
       </div>
+      <h1>Enter your Login Details</h1>
       <section className="form-section bg-light mx-3 mx-md-0">
         <div className="row mt-0">
           <div className="col-md-6 mx-auto bg-white box_shadow mt-3 py-3 rounded">
