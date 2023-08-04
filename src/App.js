@@ -4,6 +4,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
+import { BrowserRouter } from "react-router-dom";
+
 import { Routes, Route } from "react-router-dom";
 import CompanyList from "./Pages/CompanyList";
 import EmployeeList from "./Pages/EmployeeList";
@@ -42,35 +44,39 @@ function App() {
   // }, []);
   return (
     <DataContextProvider>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<PrivateRoute />}>
-          {/* <Route path="/" element={<LoadingEffect />}> */}
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/companieslist" element={<CompanyList />} />
-          <Route path="/companieslist/:companyid" element={<EditCompany />} />
-          <Route path="/addcompany" element={<AddCompany />} />
-          <Route
-            path="/bulkycompaniesupload"
-            element={<BulkyCompaniesUpload />}
-          />
-          <Route path="/employeeslist" element={<EmployeeList />} />
-          <Route path="/employeeslist/:employeeid" element={<EditEmployee />} />
-          <Route path="/addemployee" element={<AddEmployee />} />
-          <Route
-            path="/bulkyemployeesupload"
-            element={<BulkyEmployeesUpload />}
-          />
-          {/* <Route path="/upload-csv" element={<CSVUploader />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<PrivateRoute />}>
+            {/* <Route path="/" element={<LoadingEffect />}> */}
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/companieslist" element={<CompanyList />} />
+            <Route path="/companieslist/:companyid" element={<EditCompany />} />
+            <Route path="/addcompany" element={<AddCompany />} />
+            <Route
+              path="/bulkycompaniesupload"
+              element={<BulkyCompaniesUpload />}
+            />
+            <Route path="/employeeslist" element={<EmployeeList />} />
+            <Route
+              path="/employeeslist/:employeeid"
+              element={<EditEmployee />}
+            />
+            <Route path="/addemployee" element={<AddEmployee />} />
+            <Route
+              path="/bulkyemployeesupload"
+              element={<BulkyEmployeesUpload />}
+            />
+            {/* <Route path="/upload-csv" element={<CSVUploader />} />
           <Route path="/dashboard" element={<CompanyList />} />
           <Route
             path="/companies/:companyId/employees"
             element={<EmployeeList />}
           />
           <Route path="/upload-csv" element={<CSVUploader />} /> */}
-        </Route>
-        <Route path="/*" element={<Notfound />} />
-        {/* <PrivateRoute path="/*" element={<PrivateComponent />} />
+          </Route>
+          <Route path="/*" element={<Notfound />} />
+          {/* <PrivateRoute path="/*" element={<PrivateComponent />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/upload-csv" element={<CSVUploader />} />
           <Route path="/dashboard" element={<CompanyList />} />
@@ -80,10 +86,11 @@ function App() {
           />
           <Route path="/companyDetail/:id" element={<EditCompany />} />
           {/* <Route path="/" element={<CSVUploader />} /> */}
-        {/* </Route> */}
+          {/* </Route> */}
 
-        {/* <Route path="/" exact element={<LoginPage />} /> */}
-      </Routes>
+          {/* <Route path="/" exact element={<LoginPage />} /> */}
+        </Routes>
+      </BrowserRouter>
     </DataContextProvider>
   );
 }
