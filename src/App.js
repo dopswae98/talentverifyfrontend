@@ -43,8 +43,8 @@ function App() {
   //   }
   // }, []);
   return (
-    <DataContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <DataContextProvider>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<PrivateRoute />}>
@@ -90,8 +90,8 @@ function App() {
 
           {/* <Route path="/" exact element={<LoginPage />} /> */}
         </Routes>
-      </BrowserRouter>
-    </DataContextProvider>
+      </DataContextProvider>
+    </BrowserRouter>
   );
 }
 
