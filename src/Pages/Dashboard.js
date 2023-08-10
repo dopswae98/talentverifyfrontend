@@ -10,7 +10,7 @@ const Dashboard = () => {
           <div className="col-md-4  position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/companieslist"
+              to="/home/companieslist"
             >
               Companies List
             </Link>
@@ -18,7 +18,7 @@ const Dashboard = () => {
           <div className="col-md-4 position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/employeeslist"
+              to="/home/employeeslist"
             >
               Employees List
             </Link>
@@ -26,7 +26,7 @@ const Dashboard = () => {
           <div className="col-md-4 position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/addemployee"
+              to="/home/addemployee"
             >
               Add Employess
             </Link>
@@ -34,7 +34,7 @@ const Dashboard = () => {
           <div className="col-md-4 position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/addcompany"
+              to="/home/addcompany"
             >
               Add Company
             </Link>
@@ -42,7 +42,7 @@ const Dashboard = () => {
           <div className="col-md-4 position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/bulkyemployeesupload"
+              to="/home/bulkyemployeesupload"
             >
               Bulk Employees Upload
             </Link>
@@ -50,7 +50,7 @@ const Dashboard = () => {
           <div className="col-md-4 position-relative">
             <Link
               className="link bg-danger d-flex align-items-center justify-content-center h-100 py-5 rounded text-center fw-bold text-white"
-              to="/bulkycompaniesupload"
+              to="/home/bulkycompaniesupload"
             >
               Bulky Companies Upload
             </Link>

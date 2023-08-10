@@ -46,25 +46,28 @@ function App() {
     <BrowserRouter>
       <DataContextProvider>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<PrivateRoute />}>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<PrivateRoute />}>
             {/* <Route path="/" element={<LoadingEffect />}> */}
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/companieslist" element={<CompanyList />} />
-            <Route path="/companieslist/:companyid" element={<EditCompany />} />
-            <Route path="/addcompany" element={<AddCompany />} />
+            <Route path="/home" element={<Dashboard />} />
+            <Route path="/home/companieslist" element={<CompanyList />} />
             <Route
-              path="/bulkycompaniesupload"
+              path="/home/companieslist/:companyid"
+              element={<EditCompany />}
+            />
+            <Route path="/home/addcompany" element={<AddCompany />} />
+            <Route
+              path="/home/bulkycompaniesupload"
               element={<BulkyCompaniesUpload />}
             />
-            <Route path="/employeeslist" element={<EmployeeList />} />
+            <Route path="/home/employeeslist" element={<EmployeeList />} />
             <Route
-              path="/employeeslist/:employeeid"
+              path="/home/employeeslist/:employeeid"
               element={<EditEmployee />}
             />
-            <Route path="/addemployee" element={<AddEmployee />} />
+            <Route path="/home/addemployee" element={<AddEmployee />} />
             <Route
-              path="/bulkyemployeesupload"
+              path="/home/bulkyemployeesupload"
               element={<BulkyEmployeesUpload />}
             />
             {/* <Route path="/upload-csv" element={<CSVUploader />} />

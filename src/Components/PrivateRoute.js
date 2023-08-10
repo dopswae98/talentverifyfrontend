@@ -48,35 +48,10 @@ function PrivateRoute({ element }) {
   // };
 
   if (!fakeAuthService.isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
-  const handleLogout = () => {
-    // navigate("/login");
-    // return <Navigate to="/login" replace={true} />;
-    fakeAuthService["isAuthenticated"] = false;
-    // setFakeAuthService({ ...fakeAuthService, isAuthenticated: false });
-    setAuth(true);
-    // const fakeAuthService = {
-    //   isAuthenticated: false,
-    //   login(callback) {
-    //     this.isAuthenticated = true;
-    //     setTimeout(callback, 100);
-    // //   },
-    //   logout(callback) {
-    //     this.isAuthenticated = true;
-    //     setTimeout(callback, 100);
-    //   },
-    // };
-    // history.pushState("/login");
-    console.log("logged out");
-    if (
-      // !fakeAuthService.isAuthenticated &&
-      !auth
-    ) {
-      return <Navigate to="/login" replace={true} />;
-    }
-  };
+ 
 
   return (
     <div className="position-relative" style={{ height: "max-content" }}>

@@ -100,7 +100,7 @@ const NavbarComponent = () => {
                   <Link
                     className="nav-link active"
                     aria-current="page"
-                    to="/addemployee"
+                    to="/home/addemployee"
                   >
                     Add Employee
                   </Link>
@@ -109,7 +109,7 @@ const NavbarComponent = () => {
                   <Link
                     className="nav-link active"
                     aria-current="page"
-                    to="/employeeslist"
+                    to="/home/employeeslist"
                   >
                     Employee List
                   </Link>
@@ -118,7 +118,7 @@ const NavbarComponent = () => {
                   <Link
                     className="nav-link active"
                     aria-current="page"
-                    to="/companieslist"
+                    to="/home/companieslist"
                   >
                     Companies List
                   </Link>
@@ -139,7 +139,7 @@ const NavbarComponent = () => {
                       <Link
                         className="nav-link active"
                         aria-current="page"
-                        to="/bulkycompaniesupload"
+                        to="/home/bulkycompaniesupload"
                       >
                         Bulky Companies Upload
                       </Link>
@@ -148,7 +148,7 @@ const NavbarComponent = () => {
                       <Link
                         className="nav-link active "
                         aria-current="page"
-                        to="/bulkyemployeesupload"
+                        to="/home/bulkyemployeesupload"
                       >
                         Bulky Employees Upload
                       </Link>

@@ -61,7 +61,7 @@ const DataContextProvider = ({ children }) => {
       });
 
   const [fakeAuthService, setFakeAuthService] = useState({
-    isAuthenticated: false,
+    isAuthenticated: true,
     login(callback) {
       this.isAuthenticated = true;
       setTimeout(callback, 100);
@@ -98,13 +98,13 @@ const DataContextProvider = ({ children }) => {
   const login = (token) => {
     localStorage.setItem("token", token);
     setIsAuthenticated(true);
-    navigate("/dashboard"); // Redirect to private route after login
+    navigate("/home"); // Redirect to private route after login
   };
 
   const logout = () => {
     localStorage.removeItem("token");
     setIsAuthenticated(false);
-    navigate("/login"); // Redirect to login page after logout
+    navigate("/"); // Redirect to login page after logout
   };
 
   const contextValue = {

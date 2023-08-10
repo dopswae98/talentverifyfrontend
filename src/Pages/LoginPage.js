@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import NavbarComponent from "../Components/NavbarComponent";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
@@ -47,6 +47,10 @@ const LoginPage = () => {
   // }
 
   // the working code for authentication from an api *****
+
+  useEffect(() => {
+    setFakeAuthService({ ...fakeAuthService, isAuthenticated: false });
+  }, []);
   const handleLogin = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -62,7 +66,7 @@ const LoginPage = () => {
         // login();
         // setAuth({ token: true });
         setFeedback(true);
-        navigate("/dashboard");
+        navigate("/home");
         // <Navigate to="/upload-csv" />;
 
         console.log("login success");
